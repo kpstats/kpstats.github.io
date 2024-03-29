@@ -25,7 +25,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/02.png"
-	}
+	},
 	
 	{	/* 3 CAPRICE BAILLIE */
 		fName:"Caprice", sName:"Baillie",
@@ -39,7 +39,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/03.png"
-	}
+	},
 	
 	{	/* 4 CARLIE CHIRCOP */
 		fName:"Carlie", sName:"Chircop",
@@ -53,7 +53,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/04.png"
-	}
+	},
 	
 	{	/* 5 ALEX KILTY */
 		fName:"Alex", sName:"Kilty",
@@ -67,7 +67,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/05.png"
-	}
+	},
 	
 	{	/* 6 EMILY LAIDLAW */
 		fName:"Emily", sName:"Laidlaw",
@@ -81,7 +81,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/06.png"
-	}
+	},
 	
 	{	/* 7 KYLIE GARTH */
 		fName:"Kylie", sName:"Garth",
@@ -95,7 +95,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/07.png"
-	}
+	},
 	
 	{	/* 8 KIERA DORRINGTON */
 		fName:"Kiera", sName:"Dorrington",
@@ -109,7 +109,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/08.png"
-	}
+	},
 	
 	{	/* 9 MIA TOURNAS */
 		fName:"Mia", sName:"Tournas",
@@ -123,7 +123,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/09.png"
-	}
+	},
 	
 	{	/* 10 RAINBOW EBERT */
 		fName:"Rainbow", sName:"Ebert",
@@ -137,7 +137,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/10.png"
-	}
+	},
 	
 	{	/* 11 ALANA VIDOV */
 		fName:"Alana", sName:"Vidov",
@@ -151,7 +151,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/11.png"
-	}
+	},
 	
 	{	/* 12 NYNY MALUAL */
 		fName:"NyNy", sName:"Malual",
@@ -165,7 +165,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/12.png"
-	}
+	},
 	
 	{	/* 13 CAITLYN CRAMERI */
 		fName:"Caitlyn", sName:"Crameri",
@@ -179,7 +179,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/13.png"
-	}
+	},
 	
 	{	/* 14 LAYCEE EUSTACE */
 		fName:"Laycee", sName:"Eustace",
@@ -193,7 +193,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/14.png"
-	}
+	},
 	
 	{	/* 15 BELLA ARVANITIS */
 		fName:"Bella", sName:"Arvanitis",
@@ -207,7 +207,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/15.png"
-	}
+	},
 	
 	{	/* 16 ANGEL POKORA */
 		fName:"Angel", sName:"Pokora",
@@ -221,7 +221,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/16.png"
-	}
+	},
 	
 	{	/* 17 JESSIE HAZELDINE-ONNO */
 		fName:"Jessie", sName:"Hazeldine-Onno",
@@ -235,7 +235,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/17.png"
-	}
+	},
 	
 	{	/* 18 MAKENZIE CARR */
 		fName:"Makenzie", sName:"Carr",
@@ -249,7 +249,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/18.png"
-	}
+	},
 	
 	{	/* 19 GENNA ROOTH */
 		fName:"Genna", sName:"Rooth",
@@ -263,7 +263,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/19.png"
-	}
+	},
 	
 	{	/* 20 SARAH PONI */
 		fName:"Sarah", sName:"Poni",
@@ -277,7 +277,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/20.png"
-	}
+	},
 	
 	{	/* 21 KAYLA CORRIGAN */
 		fName:"Kayla", sName:"Corrigan",
@@ -291,7 +291,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/21.png"
-	}
+	},
 	
 	{	/* 22 TAYLOR ROSE EVANS */
 		fName:"Taylor", sName:"Rose Evans",
@@ -305,7 +305,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/22.png"
-	}
+	},
 	
 	{	/* 23 ALYX WILKINSON */
 		fName:"Alyx", sName:"Wilkinson",
@@ -319,7 +319,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/23.png"
-	}
+	},
 	
 	/*{	 24 NO PLAYER
 		fName:"", sName:"",
@@ -333,7 +333,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/24.png"
-	}*/
+	},*/
 	
 	{	/* 25 TAHLIA REEVES */
 		fName:"Tahlia", sName:"Reeves",
@@ -347,7 +347,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/25.png"
-	}
+	},
 	
 	/*{	 26 NO PLAYER
 		fName:"", sName:"",
@@ -361,7 +361,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/26.png"
-	}*/
+	},*/
 	
 	{	/* 27 OLIVIA KOCH */
 		fName:"Olivia", sName:"Koch",
@@ -375,7 +375,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/27.png"
-	}
+	},
 	
 	/*{	 28 NO PLAYER
 		fName:"", sName:"",
@@ -389,7 +389,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/28.png"
-	}*/
+	},*/
 	
 	{	/* 29 MOLLI RUSSELL */
 		fName:"Molli", sName:"Russell",
@@ -403,7 +403,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/29.png"
-	}
+	},
 	
 	{	/* 30 MARISSA BAKER */
 		fName:"Marissa", sName:"Baker",
@@ -417,7 +417,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/30.png"
-	}
+	},
 	
 	/*{	 31 NO PLAYER
 		fName:"", sName:"",
@@ -431,7 +431,7 @@ const player = [
 		tBehinds: 0,
 		tFantasy: 0,
 		pImage: "img/player_jerseys/31.png"
-	}*/
+	},*/
 	
 	{	/* 32 DESTINY EUSTACE */
 		fName:"Destiny", sName:"Eustace",
@@ -454,11 +454,29 @@ const matchMelton = [
 	},
 	
 	{ /* 2 ERIN ROBINSON */
-		mPlayed: false,
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 14,
+		mHandballs: 1,
+		mClearances: 0,
+		mTackles: 4,
+		mMarks: 6,
+		mGoals: 3,
+		mBehinds: 1,
+		mFantasy: 0,
 	},
 	
 	{ /* 3 CAPRICE BAILLIE */
-		mPlayed: false,
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 8,
+		mHandballs: 3,
+		mClearances: 0,
+		mTackles: 4,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
 	},
 	
 	{ /* 4 CARLIE CHIRCOP */
@@ -470,11 +488,29 @@ const matchMelton = [
 	},
 	
 	{ /* 6 EMILY LAIDLAW */
-		mPlayed: false,
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 7,
+		mHandballs: 2,
+		mClearances: 1,
+		mTackles: 1,
+		mMarks: 4,
+		mGoals: 3,
+		mBehinds: 2,
+		mFantasy: 0,
 	},
 	
 	{ /* 7 KYLIE GARTH */
-		mPlayed: false,
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 1,
+		mHandballs: 1,
+		mClearances: 0,
+		mTackles: 1,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
 	},
 	
 	{ /* 8 KIERA DORRINGTON */
@@ -482,7 +518,16 @@ const matchMelton = [
 	},
 	
 	{ /* 9 MIA TOURNAS */
-		mPlayed: false,
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 19,
+		mHandballs: 8,
+		mClearances: 0,
+		mTackles: 11,
+		mMarks: 1,
+		mGoals: 0,
+		mBehinds: 2,
+		mFantasy: 0,
 	},
 	
 	{ /* 10 RAINBOW EBERT */
@@ -490,7 +535,16 @@ const matchMelton = [
 	},
 	
 	{ /* 11 ALANA VIDOV */
-		mPlayed: false,
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 7,
+		mHandballs: 4,
+		mClearances: 1,
+		mTackles: 1,
+		mMarks: 0,
+		mGoals: 1,
+		mBehinds: 0,
+		mFantasy: 0,
 	},
 	
 	{ /* 12 NYNY MALUAL */
@@ -498,7 +552,16 @@ const matchMelton = [
 	},
 	
 	{ /* 13 CAITLYN CRAMERI */
-		mPlayed: false,
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 3,
+		mHandballs: 4,
+		mClearances: 0,
+		mTackles: 0,
+		mMarks: 1,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
 	},
 	
 	{ /* 14 LAYCEE EUSTACE */
@@ -506,7 +569,16 @@ const matchMelton = [
 	},
 	
 	{ /* 15 BELLA ARVANITIS */
-		mPlayed: false,
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 1,
+		mHandballs: 2,
+		mClearances: 0,
+		mTackles: 0,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
 	},
 	
 	{ /* 16 ANGEL POKORA */
@@ -522,7 +594,16 @@ const matchMelton = [
 	},
 	
 	{ /* 19 GENNA ROOTH */
-		mPlayed: false,
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 7,
+		mHandballs: 0,
+		mClearances: 0,
+		mTackles: 2,
+		mMarks: 1,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
 	},
 	
 	{ /* 20 SARAH PONI */
@@ -534,11 +615,29 @@ const matchMelton = [
 	},
 	
 	{ /* 22 TAYLOR ROSE EVANS */
-		mPlayed: false,
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 9,
+		mHandballs: 4,
+		mClearances: 1,
+		mTackles: 8,
+		mMarks: 1,
+		mGoals: 0,
+		mBehinds: 1,
+		mFantasy: 0,
 	},
 	
 	{ /* 23 ALYX WILKINSON */
-		mPlayed: false,
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 4,
+		mHandballs: 4,
+		mClearances: 1,
+		mTackles: 1,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
 	},
 	
 	/*{	 24 NO PLAYER
@@ -546,7 +645,16 @@ const matchMelton = [
 	},*/
 	
 	{ /* 25 TAHLIA REEVES */
-		mPlayed: false,
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 3,
+		mHandballs: 3,
+		mClearances: 0,
+		mTackles: 3,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
 	},
 	
 	/*{	 26 NO PLAYER
@@ -554,7 +662,16 @@ const matchMelton = [
 	},*/
 	
 	{ /* 27 OLIVIA KOCH */
-		mPlayed: false,
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 3,
+		mHandballs: 5,
+		mClearances: 0,
+		mTackles: 0,
+		mMarks: 1,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
 	},
 	
 	/*{	 28 NO PLAYER
@@ -562,11 +679,29 @@ const matchMelton = [
 	},*/
 	
 	{ /* 29 MOLLI RUSSELL */
-		mPlayed: false,
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 6,
+		mHandballs: 1,
+		mClearances: 0,
+		mTackles: 0,
+		mMarks: 4,
+		mGoals: 0,
+		mBehinds: 1,
+		mFantasy: 0,
 	},
 	
 	{ /* 30 MARISSA BAKER */
-		mPlayed: false,
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 19,
+		mHandballs: 5,
+		mClearances: 2,
+		mTackles: 7,
+		mMarks: 1,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
 	},
 	
 	/*{	 31 NO PLAYER
@@ -578,6 +713,40 @@ const matchMelton = [
 	},
 ];
 
+/* FANTASY POINTS LEGEND 
+	Kick = 3 Points
+	Hanball = 2 Points
+	Mark = 3 Points
+	Tackle = 4 Points
+	Goal = 6 Points
+	Behind = 1 Point
+*/ 
+
 function loadDefault() {
-	//console.log("loaded");
+	/* TOP 5 ELEMENT CREATION */
+	
+	var topFive = 5;
+	var colCount = 3;
+	
+	for(i = 0; i < topFive; i++) { /* CREATE TOP 5 ROWS */
+		var tr = document.createElement("tr");
+		tr.id = "row" + i.toString();
+		document.getElementById("tDisposals").appendChild(tr);
+		
+		matchMelton.sort(function(a, b){return b.mKicks - a.mKicks});
+		
+		if(i == 0) {
+			for(c = 0; c < colCount; c++) { /* STAT LEADER COLUMN CREATION */
+				var th = document.createElement("th");
+				th.id = "col" + i.toString() + c.toString();
+				document.getElementById("row0").appendChild(th);
+			}
+		} else if(i != 0) { /* REGULAR COLUMN CREATION */
+			for(c = 0; c < colCount; c++) {
+				var td = document.createElement("td");
+				td.id = "col" + i.toString() + c.toString();
+				document.getElementById("row" + i.toString()).appendChild(td);
+			}
+		}
+	}
 }
