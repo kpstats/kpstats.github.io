@@ -1,3 +1,12 @@
+/* FANTASY POINTS LEGEND 
+	Kick = 3 Points
+	Hanball = 2 Points
+	Mark = 3 Points
+	Tackle = 4 Points
+	Goal = 6 Points
+	Behind = 1 Point
+*/ 
+
 const player = [
 	{ 	/* 1 JEMMA HAY */
 		fName:"Jemma", sName:"Hay",
@@ -448,7 +457,7 @@ const player = [
 	}
 ];
 
-const matchMelton = [
+const mMelton = [
 	{ /* 1 JEMMA HAY */
 		mPlayed: false,
 	},
@@ -710,43 +719,617 @@ const matchMelton = [
 	
 	{ /* 32 DESTINY EUSTACE */
 		mPlayed: false,
-	},
+	}
 ];
 
-/* FANTASY POINTS LEGEND 
-	Kick = 3 Points
-	Hanball = 2 Points
-	Mark = 3 Points
-	Tackle = 4 Points
-	Goal = 6 Points
-	Behind = 1 Point
-*/ 
+const mTaylors = [
+	{ /* 1 JEMMA HAY */
+		mPlayed: false,
+	},
+	
+	{ /* 2 ERIN ROBINSON */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 20,
+		mHandballs: 4,
+		mClearances: 2,
+		mTackles: 2,
+		mMarks: 8,
+		mGoals: 4,
+		mBehinds: 1,
+		mFantasy: 0,
+	},
+	
+	{ /* 3 CAPRICE BAILLIE */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 18,
+		mHandballs: 2,
+		mClearances: 1,
+		mTackles: 2,
+		mMarks: 3,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 4 CARLIE CHIRCOP */
+		mPlayed: false,
+	},
+	
+	{ /* 5 ALEX KILTY */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 33,
+		mHandballs: 3,
+		mClearances: 5,
+		mTackles: 2,
+		mMarks: 5,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 6 EMILY LAIDLAW */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 10,
+		mHandballs: 2,
+		mClearances: 1,
+		mTackles: 3,
+		mMarks: 2,
+		mGoals: 2,
+		mBehinds: 3,
+		mFantasy: 0,
+	},
+	
+	{ /* 7 KYLIE GARTH */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 9,
+		mHandballs: 5,
+		mClearances: 2,
+		mTackles: 4,
+		mMarks: 1,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 8 KIERA DORRINGTON */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 9,
+		mHandballs: 0,
+		mClearances: 0,
+		mTackles: 1,
+		mMarks: 2,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 9 MIA TOURNAS */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 13,
+		mHandballs: 4,
+		mClearances: 5,
+		mTackles: 4,
+		mMarks: 2,
+		mGoals: 1,
+		mBehinds: 1,
+		mFantasy: 0,
+	},
+	
+	{ /* 10 RAINBOW EBERT */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 13,
+		mHandballs: 11,
+		mClearances: 1,
+		mTackles: 5,
+		mMarks: 4,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 11 ALANA VIDOV */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 13,
+		mHandballs: 4,
+		mClearances: 0,
+		mTackles: 2,
+		mMarks: 2,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 12 NYNY MALUAL */
+		mPlayed: false,
+	},
+	
+	{ /* 13 CAITLYN CRAMERI */
+		mPlayed: false,
+	},
+	
+	{ /* 14 LAYCEE EUSTACE */
+		mPlayed: false,
+	},
+	
+	{ /* 15 BELLA ARVANITIS */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 10,
+		mHandballs: 2,
+		mClearances: 0,
+		mTackles: 8,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 16 ANGEL POKORA */
+		mPlayed: false,
+	},
+	
+	{ /* 17 JESSIE HAZELDINE-ONNO */
+		mPlayed: false,
+	},
+	
+	{ /* 18 MAKENZIE CARR */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 2,
+		mHandballs: 0,
+		mClearances: 0,
+		mTackles: 2,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 19 GENNA ROOTH */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 2,
+		mHandballs: 2,
+		mClearances: 0,
+		mTackles: 2,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 20 SARAH PONI */
+		mPlayed: false,
+	},
+	
+	{ /* 21 KAYLA CORRIGAN */
+		mPlayed: false,
+	},
+	
+	{ /* 22 TAYLOR ROSE EVANS */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 17,
+		mHandballs: 6,
+		mClearances: 7,
+		mTackles: 9,
+		mMarks: 2,
+		mGoals: 0,
+		mBehinds: 1,
+		mFantasy: 0,
+	},
+	
+	{ /* 23 ALYX WILKINSON */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 8,
+		mHandballs: 2,
+		mClearances: 1,
+		mTackles: 4,
+		mMarks: 0,
+		mGoals: 1,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	/*{	 24 NO PLAYER
+		mPlayed: false,
+	},*/
+	
+	{ /* 25 TAHLIA REEVES */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 4,
+		mHandballs: 2,
+		mClearances: 0,
+		mTackles: 1,
+		mMarks: 2,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	/*{	 26 NO PLAYER
+		mPlayed: false,
+	},*/
+	
+	{ /* 27 OLIVIA KOCH */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 1,
+		mHandballs: 3,
+		mClearances: 0,
+		mTackles: 1,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	/*{	 28 NO PLAYER
+		mPlayed: false,
+	},*/
+	
+	{ /* 29 MOLLI RUSSELL */
+		mPlayed: false,
+	},
+	
+	{ /* 30 MARISSA BAKER */
+		mPlayed: false,
+	},
+	
+	/*{	 31 NO PLAYER
+		mPlayed: false,
+	},*/
+	
+	{ /* 32 DESTINY EUSTACE */
+		mPlayed: false,
+	}
+];
 
-function loadDefault() {
-	/* TOP 5 ELEMENT CREATION */
+const mParkside = [
+	{ /* 1 JEMMA HAY */
+		mPlayed: false,
+	},
 	
-	var topFive = 5;
-	var colCount = 3;
+	{ /* 2 ERIN ROBINSON */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 21,
+		mHandballs: 3,
+		mClearances: 1,
+		mTackles: 1,
+		mMarks: 4,
+		mGoals: 0,
+		mBehinds: 2,
+		mFantasy: 0,
+	},
 	
-	for(i = 0; i < topFive; i++) { /* CREATE TOP 5 ROWS */
-		var tr = document.createElement("tr");
-		tr.id = "row" + i.toString();
-		document.getElementById("tDisposals").appendChild(tr);
-		
-		matchMelton.sort(function(a, b){return b.mKicks - a.mKicks});
-		
-		if(i == 0) {
-			for(c = 0; c < colCount; c++) { /* STAT LEADER COLUMN CREATION */
-				var th = document.createElement("th");
-				th.id = "col" + i.toString() + c.toString();
-				document.getElementById("row0").appendChild(th);
-			}
-		} else if(i != 0) { /* REGULAR COLUMN CREATION */
-			for(c = 0; c < colCount; c++) {
-				var td = document.createElement("td");
-				td.id = "col" + i.toString() + c.toString();
-				document.getElementById("row" + i.toString()).appendChild(td);
-			}
+	{ /* 3 CAPRICE BAILLIE */
+		mPlayed: false,
+	},
+	
+	{ /* 4 CARLIE CHIRCOP */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 1,
+		mHandballs: 2,
+		mClearances: 0,
+		mTackles: 0,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 5 ALEX KILTY */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 15,
+		mHandballs: 4,
+		mClearances: 3,
+		mTackles: 7,
+		mMarks: 3,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 6 EMILY LAIDLAW */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 6,
+		mHandballs: 1,
+		mClearances: 0,
+		mTackles: 0,
+		mMarks: 3,
+		mGoals: 1,
+		mBehinds: 3,
+		mFantasy: 0,
+	},
+	
+	{ /* 7 KYLIE GARTH */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 0,
+		mHandballs: 3,
+		mClearances: 0,
+		mTackles: 2,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 8 KIERA DORRINGTON */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 8,
+		mHandballs: 3,
+		mClearances: 0,
+		mTackles: 3,
+		mMarks: 1,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 9 MIA TOURNAS */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 21,
+		mHandballs: 6,
+		mClearances: 4,
+		mTackles: 8,
+		mMarks: 1,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 10 RAINBOW EBERT */
+		mPlayed: false,
+	},
+	
+	{ /* 11 ALANA VIDOV */
+		mPlayed: false,
+	},
+	
+	{ /* 12 NYNY MALUAL */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 3,
+		mHandballs: 4,
+		mClearances: 1,
+		mTackles: 2,
+		mMarks: 1,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 13 CAITLYN CRAMERI */
+		mPlayed: false,
+	},
+	
+	{ /* 14 LAYCEE EUSTACE */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 3,
+		mHandballs: 4,
+		mClearances: 0,
+		mTackles: 3,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 15 BELLA ARVANITIS */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 4,
+		mHandballs: 1,
+		mClearances: 0,
+		mTackles: 3,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 16 ANGEL POKORA */
+		mPlayed: false,
+	},
+	
+	{ /* 17 JESSIE HAZELDINE-ONNO */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 0,
+		mHandballs: 5,
+		mClearances: 0,
+		mTackles: 1,
+		mMarks: 2,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 18 MAKENZIE CARR */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 0,
+		mHandballs: 0,
+		mClearances: 0,
+		mTackles: 1,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 19 GENNA ROOTH */
+		mPlayed: false,
+	},
+	
+	{ /* 20 SARAH PONI */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 8,
+		mHandballs: 2,
+		mClearances: 0,
+		mTackles: 4,
+		mMarks: 5,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 21 KAYLA CORRIGAN */
+		mPlayed: false,
+	},
+	
+	{ /* 22 TAYLOR ROSE EVANS */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 25,
+		mHandballs: 3,
+		mClearances: 4,
+		mTackles: 10,
+		mMarks: 4,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 23 ALYX WILKINSON */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 5,
+		mHandballs: 1,
+		mClearances: 0,
+		mTackles: 0,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	/*{	 24 NO PLAYER
+		mPlayed: false,
+	},*/
+	
+	{ /* 25 TAHLIA REEVES */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 1,
+		mHandballs: 1,
+		mClearances: 0,
+		mTackles: 0,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	/*{	 26 NO PLAYER
+		mPlayed: false,
+	},*/
+	
+	{ /* 27 OLIVIA KOCH */
+		mPlayed: false,
+	},
+	
+	/*{	 28 NO PLAYER
+		mPlayed: false,
+	},*/
+	
+	{ /* 29 MOLLI RUSSELL */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 8,
+		mHandballs: 2,
+		mClearances: 2,
+		mTackles: 3,
+		mMarks: 1,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	{ /* 30 MARISSA BAKER */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 12,
+		mHandballs: 4,
+		mClearances: 1,
+		mTackles: 9,
+		mMarks: 1,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	},
+	
+	/*{	 31 NO PLAYER
+		mPlayed: false,
+	},*/
+	
+	{ /* 32 DESTINY EUSTACE */
+		mPlayed: true,
+		mDisposals: 0,
+		mKicks: 8,
+		mHandballs: 2,
+		mClearances: 1,
+		mTackles: 2,
+		mMarks: 0,
+		mGoals: 0,
+		mBehinds: 0,
+		mFantasy: 0,
+	}
+];
+
+
+function LoadDefault() { /* LOADS TOTAL DISPOSALS ON PAGE LOAD */
+	console.log("Load (Total Disposals)");
+	CalculateDisposals();
+	console.log("Loaded");
+}
+
+function CalculateDisposals() {
+	
+	for(i = 0; i < player.length; i++) {
+		/* GET MELTON MATCH STATS */
+		if(mMelton[i].mPlayed)
+		{
+			player[i].tDisposals += mMelton[i].mKicks + mMelton[i].mHandballs;
 		}
+		
+		/* GET TAYLORS LAKES MATCH STATS */
+		if(mTaylors[i].mPlayed) {
+			player[i].tDisposals += mTaylors[i].mKicks + mTaylors[i].mHandballs;
+		}
+		
+		/* GET PARKSIDE MATCH STATS */
+		if(mParkside[i].mPlayed) {
+			player[i].tDisposals += mParkside[i].mKicks + mParkside[i].mHandballs;
+		}
+		
+		
+		//console.log(player[i].fName + " " + player[i].sName + ": " + player[i].tDisposals.toString());
+	}
+	
+	player.sort(function(a, b) { return b.tDisposals - a.tDisposals; });
+	
+	for(i = 0; i < player.length; i++) {
+		console.log(player[i].fName + " " + player[i].sName + ": " + player[i].tDisposals.toString());
 	}
 }
