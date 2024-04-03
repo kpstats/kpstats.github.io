@@ -10,12 +10,40 @@
 <body>
 	
 	<div class="filter-cont">
+		<!-- SEASON FILTER -->
+		<select class="filter" id="season-filter" title="season-filter" disabled>
+			<option value="preSeason" selected>Pre-Season</option>
+		</select>
 		
+		<!-- ROUND FILTER -->
+		<select class="filter" id="round-filter" title="round-filter" disabled> <!-- DISABLED UNTIL JAVASCRIPT COMPLETE FOR ROUNDS -->
+			<option value="total" selected>Total</option>
+		</select>
+		
+		<!-- STATISTIC FILTER -->
+		<select class="filter" id="statistic-filter" title="statistic-filter" onchange="DisplayData()">
+			<option value="disposals" selected>Disposals</option>
+			<option value="kicks">Kicks</option>
+			<option value="handballs">Handballs</option>
+			<option value="clearances">Clearances</option>
+			<option value="tackles">Tackles</option>
+			<option value="marks">Marks</option>
+			<option value="goals">Goals</option>
+			<option value="behinds">Behinds</option>
+			<option value="fantasy" disabled>Fantasy</option>
+		</select>
+	</div>
+	
+	<div class="display-cont">
+		<table id="display-table">
+			
+		</table>
 	</div>
 	
 	<!-- On Load -->	
 	<script>
 		document.addEventListener('DOMContentLoaded', function() {
+			CalcTotals();
 			LoadDefault();
 		});
 	</script>

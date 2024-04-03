@@ -7,6 +7,8 @@
 	Behind = 1 Point
 */ 
 
+var loadedDefault = false;
+
 const player = [
 	{ 	/* 1 JEMMA HAY */
 		fName:"Jemma", sName:"Hay",
@@ -1298,38 +1300,525 @@ const mParkside = [
 ];
 
 
-function LoadDefault() { /* LOADS TOTAL DISPOSALS ON PAGE LOAD */
-	console.log("Load (Total Disposals)");
-	CalculateDisposals();
-	console.log("Loaded");
+function LoadDefault() {
+	CreateTable();
+	DisplayData();
+	loadedDefault = true;
 }
 
-function CalculateDisposals() {
+function CalcTotals() {
 	
 	for(i = 0; i < player.length; i++) {
 		/* GET MELTON MATCH STATS */
 		if(mMelton[i].mPlayed)
 		{
 			player[i].tDisposals += mMelton[i].mKicks + mMelton[i].mHandballs;
+			player[i].tKicks += mMelton[i].mKicks;
+			player[i].tHandballs += mMelton[i].mHandballs;
+			player[i].tClearances += mMelton[i].mClearances;
+			player[i].tTackles += mMelton[i].mTackles;
+			player[i].tMarks += mMelton[i].mMarks;
+			player[i].tGoals += mMelton[i].mGoals;
+			player[i].tBehinds += mMelton[i].mBehinds;
+			// CALCULATE FANTASY POINTS HERE
 		}
 		
 		/* GET TAYLORS LAKES MATCH STATS */
 		if(mTaylors[i].mPlayed) {
 			player[i].tDisposals += mTaylors[i].mKicks + mTaylors[i].mHandballs;
+			player[i].tKicks += mTaylors[i].mKicks;
+			player[i].tHandballs += mTaylors[i].mHandballs;
+			player[i].tClearances += mTaylors[i].mClearances;
+			player[i].tTackles += mTaylors[i].mTackles;
+			player[i].tMarks += mTaylors[i].mMarks;
+			player[i].tGoals += mTaylors[i].mGoals;
+			player[i].tBehinds += mTaylors[i].mBehinds;
+			//CALCULATE FANTASY POINTS HERE
 		}
 		
 		/* GET PARKSIDE MATCH STATS */
 		if(mParkside[i].mPlayed) {
 			player[i].tDisposals += mParkside[i].mKicks + mParkside[i].mHandballs;
+			player[i].tKicks += mParkside[i].mKicks;
+			player[i].tHandballs += mParkside[i].mHandballs;
+			player[i].tClearances += mParkside[i].mClearances;
+			player[i].tTackles += mParkside[i].mTackles;
+			player[i].tMarks += mParkside[i].mMarks;
+			player[i].tGoals += mParkside[i].mGoals;
+			player[i].tBehinds += mParkside[i].mBehinds;
+			//CALCULATE FANTASY POINTS HERE
 		}
-		
-		
-		//console.log(player[i].fName + " " + player[i].sName + ": " + player[i].tDisposals.toString());
+	}
+}
+
+function RemoveCurData() {
+	var totalRows = 27;
+	const dataZero = document.getElementById("data0");
+	const dataOne = document.getElementById("data1");
+	const dataTwo = document.getElementById("data2");
+	
+	dataZero.removeChild(dataZero.firstElementChild);
+	dataOne.removeChild(dataOne.firstElementChild);
+	dataTwo.removeChild(dataTwo.firstElementChild);
+	
+	for(i = 0; i < totalRows; i++) {
+		for(d = 0; d < 3; d++) {
+			var data = document.getElementById("data" + d.toString() + i.toString());
+			data.removeChild(data.firstElementChild);
+		}
+	}
+}
+
+function CreateTable() {
+	var maxColumns = 3;
+	
+	/* CREATE STAT LEADER ROW */
+	var tr = document.createElement("tr");
+	tr.id = "leader-row";
+	tr.style.border = "1px solid black";
+	document.getElementById("display-table").appendChild(tr);
+	
+	/* CREATE STAT LEADER COLUMNS */
+	for(i = 0; i < maxColumns; i++) { 
+		var th = document.createElement("th");
+		th.id = "data" + i.toString();
+		document.getElementById("leader-row").appendChild(th);
 	}
 	
+	/* CREATE OTHER ROWS */
+	for(i = 0; i < player.length-1; i++) {
+		var tr = document.createElement("tr");
+		tr.id = "row" + i.toString();
+		tr.style.border = "1px solid black";
+		document.getElementById("display-table").appendChild(tr);
+	
+		/* CREATE OTHER COLUMNS */
+		for(d = 0; d < maxColumns; d++) { 
+			var td = document.createElement("td");
+			td.id = "data" + d.toString() + i.toString();
+			td.style.textAlign = "center";
+			document.getElementById("row" + i.toString()).appendChild(td);
+		}
+	}
+}
+
+function DisplayData() {
+	var statValue = document.getElementById("statistic-filter").value;
+	var maxColumns = 3;
+	var leaderFinalised = false;
+	
+	
+	if(statValue == "disposals" && !loadedDefault) {
+		console.log("Loading Disposals...");
+		SortDisplayDebug();
+		
+		for(i = 0; i < player.length; i++) {
+			
+			if(!leaderFinalised) {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[0].pImage;
+				img.style.height = "60px";
+				document.getElementById("data0").appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.style.fontSize = "18px";
+				p.innerHTML = player[0].fName + " " + player[0].sName;
+				document.getElementById("data1").appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[0].tDisposals.toString();
+				document.getElementById("data2").appendChild(p2);
+				
+				leaderFinalised = true;
+			} else {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[i].pImage;
+				img.style.height = "50px";
+				p.style.fontSize = "18px";
+				document.getElementById("data0" + (i-1).toString()).appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.innerHTML = player[i].fName + " " + player[i].sName;
+				document.getElementById("data1" + (i-1).toString()).appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[i].tDisposals.toString();
+				document.getElementById("data2" + (i-1).toString()).appendChild(p2);
+			}
+		}
+	} else if(statValue == "disposals" && loadedDefault) {
+		RemoveCurData();
+		console.log("Loading Disposals...");
+		SortDisplayDebug();
+		
+		for(i = 0; i < player.length; i++) {
+			
+			if(!leaderFinalised) {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[0].pImage;
+				img.style.height = "60px";
+				document.getElementById("data0").appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.style.fontSize = "18px";
+				p.innerHTML = player[0].fName + " " + player[0].sName;
+				document.getElementById("data1").appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[0].tDisposals.toString();
+				document.getElementById("data2").appendChild(p2);
+				
+				leaderFinalised = true;
+			} else {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[i].pImage;
+				img.style.height = "50px";
+				p.style.fontSize = "18px";
+				document.getElementById("data0" + (i-1).toString()).appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.innerHTML = player[i].fName + " " + player[i].sName;
+				document.getElementById("data1" + (i-1).toString()).appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[i].tDisposals.toString();
+				document.getElementById("data2" + (i-1).toString()).appendChild(p2);
+			}
+		}
+	} else if(statValue == "kicks"){
+		RemoveCurData();
+		console.log("Loading Kicks...");
+		player.sort(function(a, b) { return b.tKicks - a.tKicks; });
+		
+		for(i = 0; i < player.length; i++) {
+			
+			if(!leaderFinalised) {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[0].pImage;
+				img.style.height = "60px";
+				document.getElementById("data0").appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.style.fontSize = "18px";
+				p.innerHTML = player[0].fName + " " + player[0].sName;
+				document.getElementById("data1").appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[0].tKicks.toString();
+				document.getElementById("data2").appendChild(p2);
+				
+				leaderFinalised = true;
+			} else {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[i].pImage;
+				img.style.height = "50px";
+				p.style.fontSize = "18px";
+				document.getElementById("data0" + (i-1).toString()).appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.innerHTML = player[i].fName + " " + player[i].sName;
+				document.getElementById("data1" + (i-1).toString()).appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[i].tKicks.toString();
+				document.getElementById("data2" + (i-1).toString()).appendChild(p2);
+			}
+		}
+	} else if(statValue == "handballs"){
+		RemoveCurData();
+		console.log("Loading Handballs...");
+		player.sort(function(a, b) { return b.tHandballs - a.tHandballs; });
+		
+		for(i = 0; i < player.length; i++) {
+			
+			if(!leaderFinalised) {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[0].pImage;
+				img.style.height = "60px";
+				document.getElementById("data0").appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.style.fontSize = "18px";
+				p.innerHTML = player[0].fName + " " + player[0].sName;
+				document.getElementById("data1").appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[0].tHandballs.toString();
+				document.getElementById("data2").appendChild(p2);
+				
+				leaderFinalised = true;
+			} else {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[i].pImage;
+				img.style.height = "50px";
+				p.style.fontSize = "18px";
+				document.getElementById("data0" + (i-1).toString()).appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.innerHTML = player[i].fName + " " + player[i].sName;
+				document.getElementById("data1" + (i-1).toString()).appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[i].tHandballs.toString();
+				document.getElementById("data2" + (i-1).toString()).appendChild(p2);
+			}
+		}
+	} else if(statValue == "clearances"){
+		RemoveCurData();
+		console.log("Loading Clearances...");
+		player.sort(function(a, b) { return b.tClearances - a.tClearances; });
+		
+		for(i = 0; i < player.length; i++) {
+			
+			if(!leaderFinalised) {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[0].pImage;
+				img.style.height = "60px";
+				document.getElementById("data0").appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.style.fontSize = "18px";
+				p.innerHTML = player[0].fName + " " + player[0].sName;
+				document.getElementById("data1").appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[0].tClearances.toString();
+				document.getElementById("data2").appendChild(p2);
+				
+				leaderFinalised = true;
+			} else {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[i].pImage;
+				img.style.height = "50px";
+				p.style.fontSize = "18px";
+				document.getElementById("data0" + (i-1).toString()).appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.innerHTML = player[i].fName + " " + player[i].sName;
+				document.getElementById("data1" + (i-1).toString()).appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[i].tClearances.toString();
+				document.getElementById("data2" + (i-1).toString()).appendChild(p2);
+			}
+		}
+	} else if(statValue == "tackles"){
+		RemoveCurData();
+		console.log("Loading Tackles...");
+		player.sort(function(a, b) { return b.tTackles - a.tTackles; });
+		
+		for(i = 0; i < player.length; i++) {
+			
+			if(!leaderFinalised) {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[0].pImage;
+				img.style.height = "60px";
+				document.getElementById("data0").appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.style.fontSize = "18px";
+				p.innerHTML = player[0].fName + " " + player[0].sName;
+				document.getElementById("data1").appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[0].tTackles.toString();
+				document.getElementById("data2").appendChild(p2);
+				
+				leaderFinalised = true;
+			} else {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[i].pImage;
+				img.style.height = "50px";
+				p.style.fontSize = "18px";
+				document.getElementById("data0" + (i-1).toString()).appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.innerHTML = player[i].fName + " " + player[i].sName;
+				document.getElementById("data1" + (i-1).toString()).appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[i].tTackles.toString();
+				document.getElementById("data2" + (i-1).toString()).appendChild(p2);
+			}
+		}
+	} else if(statValue == "marks"){
+		RemoveCurData();
+		console.log("Loading Marks...");
+		player.sort(function(a, b) { return b.tMarks - a.tMarks; });
+		
+		for(i = 0; i < player.length; i++) {
+			
+			if(!leaderFinalised) {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[0].pImage;
+				img.style.height = "60px";
+				document.getElementById("data0").appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.style.fontSize = "18px";
+				p.innerHTML = player[0].fName + " " + player[0].sName;
+				document.getElementById("data1").appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[0].tMarks.toString();
+				document.getElementById("data2").appendChild(p2);
+				
+				leaderFinalised = true;
+			} else {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[i].pImage;
+				img.style.height = "50px";
+				p.style.fontSize = "18px";
+				document.getElementById("data0" + (i-1).toString()).appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.innerHTML = player[i].fName + " " + player[i].sName;
+				document.getElementById("data1" + (i-1).toString()).appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[i].tMarks.toString();
+				document.getElementById("data2" + (i-1).toString()).appendChild(p2);
+			}
+		}
+	} else if(statValue == "goals"){
+		RemoveCurData();
+		console.log("Loading Goals...");
+		player.sort(function(a, b) { return b.tGoals - a.tGoals; });
+		
+		for(i = 0; i < player.length; i++) {
+			
+			if(!leaderFinalised) {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[0].pImage;
+				img.style.height = "60px";
+				document.getElementById("data0").appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.style.fontSize = "18px";
+				p.innerHTML = player[0].fName + " " + player[0].sName;
+				document.getElementById("data1").appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[0].tGoals.toString();
+				document.getElementById("data2").appendChild(p2);
+				
+				leaderFinalised = true;
+			} else {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[i].pImage;
+				img.style.height = "50px";
+				p.style.fontSize = "18px";
+				document.getElementById("data0" + (i-1).toString()).appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.innerHTML = player[i].fName + " " + player[i].sName;
+				document.getElementById("data1" + (i-1).toString()).appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[i].tGoals.toString();
+				document.getElementById("data2" + (i-1).toString()).appendChild(p2);
+			}
+		}
+	} else if(statValue == "behinds"){
+		RemoveCurData();
+		console.log("Loading Behinds...");
+		player.sort(function(a, b) { return b.tBehinds - a.tBehinds; });
+		
+		for(i = 0; i < player.length; i++) {
+			
+			if(!leaderFinalised) {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[0].pImage;
+				img.style.height = "60px";
+				document.getElementById("data0").appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.style.fontSize = "18px";
+				p.innerHTML = player[0].fName + " " + player[0].sName;
+				document.getElementById("data1").appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[0].tBehinds.toString();
+				document.getElementById("data2").appendChild(p2);
+				
+				leaderFinalised = true;
+			} else {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[i].pImage;
+				img.style.height = "50px";
+				p.style.fontSize = "18px";
+				document.getElementById("data0" + (i-1).toString()).appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.innerHTML = player[i].fName + " " + player[i].sName;
+				document.getElementById("data1" + (i-1).toString()).appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[i].tBehinds.toString();
+				document.getElementById("data2" + (i-1).toString()).appendChild(p2);
+			}
+		}
+	}
+}
+
+function SortDisplayDebug() {
 	player.sort(function(a, b) { return b.tDisposals - a.tDisposals; });
 	
-	for(i = 0; i < player.length; i++) {
+	/*for(i = 0; i < player.length; i++) {
 		console.log(player[i].fName + " " + player[i].sName + ": " + player[i].tDisposals.toString());
-	}
+	}*/
 }
