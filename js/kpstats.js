@@ -1,13 +1,25 @@
-	/* FANTASY POINTS LEGEND 
-	Kick = 3 Points
-	Hanball = 2 Points
-	Mark = 3 Points
-	Tackle = 4 Points
-	Goal = 6 Points
-	Behind = 1 Point
-*/ 
+const fantasyPoints = [
+	{
+		fKick: 3,
+		fHandball: 2,
+		fClearance: 3,
+		fMark: 3,
+		fTackle: 4,
+		fGoal: 6,
+		fBehind: 1,
+	}
+];
+
+const fantasyKick = 3;
+const fantasyHandball = 2;
+const fantasyClearance = 3;
+const fantasyMark = 3;
+const fantasyTackle = 4;
+const fantasyGoal = 6;
+const fantasyBehind = 1;
 
 var loadedDefault = false;
+var roundSpecific = false;
 
 const player = [
 	{ 	/* 1 JEMMA HAY */
@@ -1320,7 +1332,6 @@ function CalcTotals() {
 			player[i].tMarks += mMelton[i].mMarks;
 			player[i].tGoals += mMelton[i].mGoals;
 			player[i].tBehinds += mMelton[i].mBehinds;
-			// CALCULATE FANTASY POINTS HERE
 		}
 		
 		/* GET TAYLORS LAKES MATCH STATS */
@@ -1333,7 +1344,6 @@ function CalcTotals() {
 			player[i].tMarks += mTaylors[i].mMarks;
 			player[i].tGoals += mTaylors[i].mGoals;
 			player[i].tBehinds += mTaylors[i].mBehinds;
-			//CALCULATE FANTASY POINTS HERE
 		}
 		
 		/* GET PARKSIDE MATCH STATS */
@@ -1346,8 +1356,21 @@ function CalcTotals() {
 			player[i].tMarks += mParkside[i].mMarks;
 			player[i].tGoals += mParkside[i].mGoals;
 			player[i].tBehinds += mParkside[i].mBehinds;
-			//CALCULATE FANTASY POINTS HERE
 		}
+	}
+	
+	ConvertFantasyPoints();
+}
+
+function ConvertFantasyPoints() {
+	for(i = 0; i < player.length; i++) {
+		player[i].tFantasy += (player[i].tKicks * fantasyKick);
+		player[i].tFantasy += (player[i].tHandballs * fantasyHandball);
+		player[i].tFantasy += (player[i].tClearances * fantasyClearance);
+		player[i].tFantasy += (player[i].tTackles * fantasyTackle);
+		player[i].tFantasy += (player[i].tMarks * fantasyMark);
+		player[i].tFantasy += (player[i].tGoals * fantasyGoal);
+		player[i].tFantasy += (player[i].tBehinds * fantasyBehind);
 	}
 }
 
@@ -1410,7 +1433,7 @@ function DisplayData() {
 	
 	if(statValue == "disposals" && !loadedDefault) {
 		console.log("Loading Disposals...");
-		SortDisplayDebug();
+		SortDisplay();
 		
 		for(i = 0; i < player.length; i++) {
 			
@@ -1455,7 +1478,7 @@ function DisplayData() {
 	} else if(statValue == "disposals" && loadedDefault) {
 		RemoveCurData();
 		console.log("Loading Disposals...");
-		SortDisplayDebug();
+		SortDisplay();
 		
 		for(i = 0; i < player.length; i++) {
 			
@@ -1812,13 +1835,54 @@ function DisplayData() {
 				document.getElementById("data2" + (i-1).toString()).appendChild(p2);
 			}
 		}
+	} else if(statValue == "fantasy"){
+		RemoveCurData();
+		console.log("Loading Fantasy...");
+		player.sort(function(a, b) { return b.tFantasy - a.tFantasy; });
+		
+		for(i = 0; i < player.length; i++) {
+			
+			if(!leaderFinalised) {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[0].pImage;
+				img.style.height = "60px";
+				document.getElementById("data0").appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.style.fontSize = "18px";
+				p.innerHTML = player[0].fName + " " + player[0].sName;
+				document.getElementById("data1").appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[0].tFantasy.toString();
+				document.getElementById("data2").appendChild(p2);
+				
+				leaderFinalised = true;
+			} else {
+				var img = document.createElement("img");
+				img.alt = "0" + i.toString();
+				img.src = player[i].pImage;
+				img.style.height = "50px";
+				p.style.fontSize = "18px";
+				document.getElementById("data0" + (i-1).toString()).appendChild(img);
+				
+				var p = document.createElement("p");
+				p.style.fontFamily = "sans-serif";
+				p.innerHTML = player[i].fName + " " + player[i].sName;
+				document.getElementById("data1" + (i-1).toString()).appendChild(p);
+				
+				var p2 = document.createElement("p");
+				p2.style.fontFamily = "sans-serif";
+				p2.innerHTML = player[i].tFantasy.toString();
+				document.getElementById("data2" + (i-1).toString()).appendChild(p2);
+			}
+		}
 	}
 }
 
-function SortDisplayDebug() {
+function SortDisplay() {
 	player.sort(function(a, b) { return b.tDisposals - a.tDisposals; });
-	
-	/*for(i = 0; i < player.length; i++) {
-		console.log(player[i].fName + " " + player[i].sName + ": " + player[i].tDisposals.toString());
-	}*/
 }
