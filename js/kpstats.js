@@ -1,4 +1,4 @@
-/* FANTASY POINTS LEGEND 
+	/* FANTASY POINTS LEGEND 
 	Kick = 3 Points
 	Hanball = 2 Points
 	Mark = 3 Points
@@ -533,7 +533,7 @@ const mMelton = [
 		mDisposals: 0,
 		mKicks: 19,
 		mHandballs: 8,
-		mClearances: 0,
+		mClearances: 7,
 		mTackles: 11,
 		mMarks: 1,
 		mGoals: 0,
