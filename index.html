@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/statdisplay.css">
 	<script src="js/main.js"></script>
 	<script src="js/playerindex.js"></script>
 	<script src="js/display.js"></script>
@@ -26,7 +27,7 @@
 	</div>
 	
 	<div class="container">
-		<button id="advanced-button" onclick="advancedSearch();" disabled>Advanced Search</button>
+		<button id="advanced-button" onclick="advancedSearch();">Advanced Search</button>
 	</div>
 	
 	<div id="filter-cont" class="container"> <!-- Filter & Stat Section -->
@@ -65,292 +66,257 @@
 	</div>
 	
 	<div class="container" id="topfive-container">
+		<div class="table-header"><h3>Disposals</h3></div>
 		<table class="stat-table" id="disposals-table">
-			<tr class="table-header">
-				<th></th>
-				<th>Disposals</th>
-				<th></th>
-			</tr>
-			<tr id="disposals0">
+			<tr class="leader" id="disposals0">
 				<td id="disposals-data00"></td>
-				<td id="disposals-data01"></td>
-				<td id="disposals-data02"></td>
+				<td class="data-text" id="disposals-data01"></td>
+				<td class="data-text"  id="disposals-data02"></td>
 			</tr>
 			<tr id="disposals1">
 				<td id="disposals-data10"></td>
-				<td id="disposals-data11"></td>
-				<td id="disposals-data12"></td>
+				<td class="data-text"  id="disposals-data11"></td>
+				<td class="data-text"  id="disposals-data12"></td>
 			</tr>
 			<tr id="disposals2">
 				<td id="disposals-data20"></td>
-				<td id="disposals-data21"></td>
-				<td id="disposals-data22"></td>
+				<td class="data-text"  id="disposals-data21"></td>
+				<td class="data-text"  id="disposals-data22"></td>
 			</tr>
 			<tr id="disposals3">
 				<td id="disposals-data30"></td>
-				<td id="disposals-data31"></td>
-				<td id="disposals-data32"></td>
+				<td class="data-text"  id="disposals-data31"></td>
+				<td class="data-text"  id="disposals-data32"></td>
 			</tr>
 			<tr id="disposals4">
 				<td id="disposals-data40"></td>
-				<td id="disposals-data41"></td>
-				<td id="disposals-data42"></td>
+				<td class="data-text"  id="disposals-data41"></td>
+				<td class="data-text"  id="disposals-data42"></td>
 			</tr>
 		</table>
+		<div class="table-header"><h3>Kicks</h3></div>
 		<table class="stat-table" id="kicks-table">
-			<tr class="table-header">
-				<th></th>
-				<th>Kicks</th>
-				<th></th>
-			</tr>
-			<tr id="kicks0">
+
+			<tr class="leader" id="kicks0">
 				<td id="kicks-data00"></td>
-				<td id="kicks-data01"></td>
-				<td id="kicks-data02"></td>
+				<td class="data-text"  id="kicks-data01"></td>
+				<td class="data-text"  id="kicks-data02"></td>
 			</tr>
 			<tr id="kicks1">
 				<td id="kicks-data10"></td>
-				<td id="kicks-data11"></td>
-				<td id="kicks-data12"></td>
+				<td class="data-text"  id="kicks-data11"></td>
+				<td class="data-text"  id="kicks-data12"></td>
 			</tr>
 			<tr id="kicks2">
 				<td id="kicks-data20"></td>
-				<td id="kicks-data21"></td>
-				<td id="kicks-data22"></td>
+				<td class="data-text"  id="kicks-data21"></td>
+				<td class="data-text"  id="kicks-data22"></td>
 			</tr>
 			<tr id="kicks3">
 				<td id="kicks-data30"></td>
-				<td id="kicks-data31"></td>
-				<td id="kicks-data32"></td>
+				<td class="data-text"  id="kicks-data31"></td>
+				<td class="data-text"  id="kicks-data32"></td>
 			</tr>
 			<tr id="kicks4">
 				<td id="kicks-data40"></td>
-				<td id="kicks-data41"></td>
-				<td id="kicks-data42"></td>
+				<td class="data-text"  id="kicks-data41"></td>
+				<td class="data-text"  id="kicks-data42"></td>
 			</tr>
 		</table>
+		<div class="table-header"><h3>Handballs</h3></div>
 		<table class="stat-table" id="handballs-table">
-			<tr class="table-header">
-				<th></th>
-				<th>Handballs</th>
-				<th></th>
-			</tr>
-			<tr id="handballs0">
+			<tr class="leader" id="handballs0">
 				<td id="handballs-data00"></td>
-				<td id="handballs-data01"></td>
-				<td id="handballs-data02"></td>
+				<td class="data-text"  id="handballs-data01"></td>
+				<td class="data-text"  id="handballs-data02"></td>
 			</tr>
 			<tr id="handballs1">
 				<td id="handballs-data10"></td>
-				<td id="handballs-data11"></td>
-				<td id="handballs-data12"></td>
+				<td class="data-text"  id="handballs-data11"></td>
+				<td class="data-text"  id="handballs-data12"></td>
 			</tr>
 			<tr id="handballs2">
 				<td id="handballs-data20"></td>
-				<td id="handballs-data21"></td>
-				<td id="handballs-data22"></td>
+				<td class="data-text"  id="handballs-data21"></td>
+				<td class="data-text"  id="handballs-data22"></td>
 			</tr>
 			<tr id="handballs3">
 				<td id="handballs-data30"></td>
-				<td id="handballs-data31"></td>
-				<td id="handballs-data32"></td>
+				<td class="data-text"  id="handballs-data31"></td>
+				<td class="data-text"  id="handballs-data32"></td>
 			</tr>
 			<tr id="handballs4">
 				<td id="handballs-data40"></td>
-				<td id="handballs-data41"></td>
-				<td id="handballs-data42"></td>
+				<td class="data-text"  id="handballs-data41"></td>
+				<td class="data-text"  id="handballs-data42"></td>
 			</tr>
 		</table>
+		<div class="table-header"><h3>Clearances</h3></div>
 		<table class="stat-table" id="clearances-table">
-			<tr class="table-header">
-				<th></th>
-				<th>Clearances</th>
-				<th></th>
-			</tr>
-			<tr id="clearances0">
+			<tr class="leader" id="clearances0">
 				<td id="clearances-data00"></td>
-				<td id="clearances-data01"></td>
-				<td id="clearances-data02"></td>
+				<td class="data-text"  id="clearances-data01"></td>
+				<td class="data-text"  id="clearances-data02"></td>
 			</tr>
 			<tr id="clearances1">
 				<td id="clearances-data10"></td>
-				<td id="clearances-data11"></td>
-				<td id="clearances-data12"></td>
+				<td class="data-text"  id="clearances-data11"></td>
+				<td class="data-text"  id="clearances-data12"></td>
 			</tr>
 			<tr id="clearances2">
 				<td id="clearances-data20"></td>
-				<td id="clearances-data21"></td>
-				<td id="clearances-data22"></td>
+				<td class="data-text"  id="clearances-data21"></td>
+				<td class="data-text"  id="clearances-data22"></td>
 			</tr>
 			<tr id="clearances3">
 				<td id="clearances-data30"></td>
-				<td id="clearances-data31"></td>
-				<td id="clearances-data32"></td>
+				<td class="data-text"  id="clearances-data31"></td>
+				<td class="data-text"  id="clearances-data32"></td>
 			</tr>
 			<tr id="clearances4">
 				<td id="clearances-data40"></td>
-				<td id="clearances-data41"></td>
-				<td id="clearances-data42"></td>
+				<td class="data-text"  id="clearances-data41"></td>
+				<td class="data-text"  id="clearances-data42"></td>
 			</tr>
 		</table>
+		<div class="table-header"><h3>Tackles</h3></div>
 		<table class="stat-table" id="tackles-table">
-			<tr class="table-header">
-				<th></th>
-				<th>Tackles</th>
-				<th></th>
-			</tr>
-			<tr id="tackles0">
+			<tr class="leader" id="tackles0">
 				<td id="tackles-data00"></td>
-				<td id="tackles-data01"></td>
-				<td id="tackles-data02"></td>
+				<td class="data-text"  id="tackles-data01"></td>
+				<td class="data-text"  id="tackles-data02"></td>
 			</tr>
 			<tr id="tackles1">
 				<td id="tackles-data10"></td>
-				<td id="tackles-data11"></td>
-				<td id="tackles-data12"></td>
+				<td class="data-text"  id="tackles-data11"></td>
+				<td class="data-text"  id="tackles-data12"></td>
 			</tr>
 			<tr id="tackles2">
 				<td id="tackles-data20"></td>
-				<td id="tackles-data21"></td>
-				<td id="tackles-data22"></td>
+				<td class="data-text"  id="tackles-data21"></td>
+				<td class="data-text"  id="tackles-data22"></td>
 			</tr>
 			<tr id="tackles3">
 				<td id="tackles-data30"></td>
-				<td id="tackles-data31"></td>
-				<td id="tackles-data32"></td>
+				<td class="data-text"  id="tackles-data31"></td>
+				<td class="data-text"  id="tackles-data32"></td>
 			</tr>
 			<tr id="tackles4">
 				<td id="tackles-data40"></td>
-				<td id="tackles-data41"></td>
-				<td id="tackles-data42"></td>
+				<td class="data-text"  id="tackles-data41"></td>
+				<td class="data-text"  id="tackles-data42"></td>
 			</tr>
 		</table>
+		<div class="table-header"><h3>Marks</h3></div>
 		<table class="stat-table" id="marks-table">
-			<tr class="table-header">
-				<th></th>
-				<th>Marks</th>
-				<th></th>
-			</tr>
-			<tr id="marks0">
+			<tr class="leader" id="marks0">
 				<td id="marks-data00"></td>
-				<td id="marks-data01"></td>
-				<td id="marks-data02"></td>
+				<td class="data-text"  id="marks-data01"></td>
+				<td class="data-text"  id="marks-data02"></td>
 			</tr>
 			<tr id="marks1">
 				<td id="marks-data10"></td>
-				<td id="marks-data11"></td>
-				<td id="marks-data12"></td>
+				<td class="data-text"  id="marks-data11"></td>
+				<td class="data-text"  id="marks-data12"></td>
 			</tr>
 			<tr id="marks2">
 				<td id="marks-data20"></td>
-				<td id="marks-data21"></td>
-				<td id="marks-data22"></td>
+				<td class="data-text"  id="marks-data21"></td>
+				<td class="data-text"  id="marks-data22"></td>
 			</tr>
 			<tr id="marks3">
 				<td id="marks-data30"></td>
-				<td id="marks-data31"></td>
-				<td id="marks-data32"></td>
+				<td class="data-text"  id="marks-data31"></td>
+				<td class="data-text"  id="marks-data32"></td>
 			</tr>
 			<tr id="marks4">
 				<td id="marks-data40"></td>
-				<td id="marks-data41"></td>
-				<td id="marks-data42"></td>
+				<td class="data-text"  id="marks-data41"></td>
+				<td class="data-text"  id="marks-data42"></td>
 			</tr>
 		</table>
+		<div class="table-header"><h3>Goals</h3></div>
 		<table class="stat-table" id="goals-table">
-			<tr class="table-header">
-				<th></th>
-				<th>Goals</th>
-				<th></th>
-			</tr>
-			<tr id="goals0">
+			<tr class="leader" id="goals0">
 				<td id="goals-data00"></td>
-				<td id="goals-data01"></td>
-				<td id="goals-data02"></td>
+				<td class="data-text"  id="goals-data01"></td>
+				<td class="data-text"  id="goals-data02"></td>
 			</tr>
 			<tr id="goals1">
 				<td id="goals-data10"></td>
-				<td id="goals-data11"></td>
-				<td id="goals-data12"></td>
+				<td class="data-text"  id="goals-data11"></td>
+				<td class="data-text"  id="goals-data12"></td>
 			</tr>
 			<tr id="goals2">
 				<td id="goals-data20"></td>
-				<td id="goals-data21"></td>
-				<td id="goals-data22"></td>
+				<td class="data-text"  id="goals-data21"></td>
+				<td class="data-text"  id="goals-data22"></td>
 			</tr>
 			<tr id="goals3">
 				<td id="goals-data30"></td>
-				<td id="goals-data31"></td>
-				<td id="goals-data32"></td>
+				<td class="data-text"  id="goals-data31"></td>
+				<td class="data-text"  id="goals-data32"></td>
 			</tr>
 			<tr id="goals4">
 				<td id="goals-data40"></td>
-				<td id="goals-data41"></td>
-				<td id="goals-data42"></td>
+				<td class="data-text"  id="goals-data41"></td>
+				<td class="data-text" id="goals-data42"></td>
 			</tr>
 		</table>
+		<div class="table-header"><h3>Behinds</h3></div>
 		<table class="stat-table" id="behinds-table">
-			<tr class="table-header">
-				<th></th>
-				<th>Behinds</th>
-				<th></th>
-			</tr>
-			<tr id="behinds0">
+			<tr class="leader" id="behinds0">
 				<td id="behinds-data00"></td>
-				<td id="behinds-data01"></td>
-				<td id="behinds-data02"></td>
+				<td class="data-text" id="behinds-data01"></td>
+				<td class="data-text"  id="behinds-data02"></td>
 			</tr>
 			<tr id="behinds1">
 				<td id="behinds-data10"></td>
-				<td id="behinds-data11"></td>
-				<td id="behinds-data12"></td>
+				<td class="data-text"  id="behinds-data11"></td>
+				<td class="data-text"  id="behinds-data12"></td>
 			</tr>
 			<tr id="behinds2">
 				<td id="behinds-data20"></td>
-				<td id="behinds-data21"></td>
-				<td id="behinds-data22"></td>
+				<td class="data-text"  id="behinds-data21"></td>
+				<td class="data-text" id="behinds-data22"></td>
 			</tr>
 			<tr id="behinds3">
 				<td id="behinds-data30"></td>
-				<td id="behinds-data31"></td>
-				<td id="behinds-data32"></td>
+				<td class="data-text"  id="behinds-data31"></td>
+				<td class="data-text" id="behinds-data32"></td>
 			</tr>
 			<tr id="behinds4">
 				<td id="behinds-data40"></td>
-				<td id="behinds-data41"></td>
-				<td id="behinds-data42"></td>
+				<td class="data-text"  id="behinds-data41"></td>
+				<td class="data-text"  id="behinds-data42"></td>
 			</tr>
 		</table>
+		<div class="table-header"><h3>Fantasy</h3></div>
 		<table class="stat-table" id="fantasy-table">
-			<tr class="table-header">
-				<th></th>
-				<th>Fantasy</th>
-				<th></th>
-			</tr>
-			<tr id="fantasy0">
+			<tr class="leader" id="fantasy0">
 				<td id="fantasy-data00"></td>
-				<td id="fantasy-data01"></td>
-				<td id="fantasy-data02"></td>
+				<td class="data-text"  id="fantasy-data01"></td>
+				<td class="data-text"  id="fantasy-data02"></td>
 			</tr>
 			<tr id="fantasy1">
 				<td id="fantasy-data10"></td>
-				<td id="fantasy-data11"></td>
-				<td id="fantasy-data12"></td>
+				<td class="data-text"  id="fantasy-data11"></td>
+				<td class="data-text"  id="fantasy-data12"></td>
 			</tr>
 			<tr id="fantasy2">
 				<td id="fantasy-data20"></td>
-				<td id="fantasy-data21"></td>
-				<td id="fantasy-data22"></td>
+				<td class="data-text"  id="fantasy-data21"></td>
+				<td class="data-text"  id="fantasy-data22"></td>
 			</tr>
 			<tr id="fantasy3">
 				<td id="fantasy-data30"></td>
-				<td id="fantasy-data31"></td>
-				<td id="fantasy-data32"></td>
+				<td class="data-text"  id="fantasy-data31"></td>
+				<td class="data-text"  id="fantasy-data32"></td>
 			</tr>
 			<tr id="fantasy4">
 				<td id="fantasy-data40"></td>
-				<td id="fantasy-data41"></td>
-				<td id="fantasy-data42"></td>
+				<td class="data-text"  id="fantasy-data41"></td>
+				<td class="data-text"  id="fantasy-data42"></td>
 			</tr>
 		</table>
 	</div>

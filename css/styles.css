@@ -6,7 +6,7 @@ body {
 /* 
 KP GREEN: #09392F
 KP DARK GREEN: #031813
-KP ORANGE #F37322
+KP ORANGE rgba(243, 115, 34, 0.25);
 */
 
 .topnav {
@@ -54,6 +54,10 @@ KP ORANGE #F37322
 	display: none;
 }
 
+#topfive-container {
+	display: block;
+}
+
 .container #advanced-button {
 	width: 100%;
 	font-family: sans-serif;
@@ -63,32 +67,6 @@ KP ORANGE #F37322
 	background-color: #F37322;
 	color: #09392F;
 	height: 40px;
-}
-
-.table-header th {
-	color: white;
-	font-family: sans-serif;
-	font-size: 16px;
-	border-bottom: 2px solid #187C64;
-}
-
-.stat-table {
-	table-layout: fixed;
-	width: 100%;
-	border: 2px solid #187C64;
-	margin-bottom: 20px;
-	border-radius: 20px;
-	box-shadow: 0px 0px 5px 2px #09392F;
-}
-
-.stat-table tr {
-	width: 100%;
-}
-
-.stat-table td {
-	color: #F37322;
-	font-family: sans-serif;
-	text-align: center;
 }
 
 .filter-table select {
