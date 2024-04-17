@@ -1,0 +1,15 @@
+﻿body {
+    margin: 0;
+}
+
+.statcard-container {
+    max-width: 300px;
+    position: relative;
+    margin: auto;
+}
+
+.statcard-table {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+}
