@@ -15,7 +15,7 @@ const sPlayer = [
 		mTayLakes:[true, 24, 20, 4, 2, 2, 8, 4, 1, 131],
 		mParkside:[true, 24, 21, 3, 1, 1, 4, 0, 2, 90],
 		rOne:[true, 10, 9, 1, 1, 5, 3, 0, 1, 62],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 13, 9, 4, 2, 3, 1, 0, 0, 56],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	{
@@ -25,7 +25,7 @@ const sPlayer = [
 		mTayLakes:[true, 20, 18, 2, 1, 2, 3, 0, 0, 78],
 		mParkside:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		rOne:[true, 9, 5, 4, 2, 9, 0, 0, 0, 65],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 12, 10, 2, 0, 7, 0, 0, 0, 62],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	{
@@ -35,7 +35,7 @@ const sPlayer = [
 		mTayLakes:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		mParkside:[true, 3, 1, 2, 0, 0, 0, 0, 0, 7],
 		rOne:[true, 0, 0, 0, 0, 4, 0, 0, 0, 16],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 1, 1, 0, 0, 2, 0, 0, 0, 11],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	{
@@ -45,7 +45,7 @@ const sPlayer = [
 		mTayLakes:[true, 36, 33, 3, 5, 2, 5, 0, 0, 143],
 		mParkside:[true, 19, 15, 4, 3, 7, 3, 0, 0, 99],
 		rOne:[true, 14, 12, 2, 0, 0, 5, 0, 0, 55],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 18, 13, 5, 1, 6, 1, 0, 0, 79],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	{
@@ -75,7 +75,7 @@ const sPlayer = [
 		mTayLakes:[true, 9, 9, 0, 0, 1, 2, 0, 0, 37],
 		mParkside:[true, 11, 8, 3, 0, 3, 1, 0, 0, 45],
 		rOne:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 7, 5, 2, 1, 5, 0, 0, 0, 42],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	{
@@ -85,7 +85,7 @@ const sPlayer = [
 		mTayLakes:[true, 17, 13, 4, 5, 4, 2, 1, 1, 91],
 		mParkside:[true, 27, 21, 6, 4, 8, 1, 0, 0, 122],
 		rOne:[true, 20, 16, 4, 7, 13, 1, 1, 0, 138],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 14, 10, 4, 4, 17, 2, 0, 0, 124],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	/*
@@ -106,7 +106,7 @@ const sPlayer = [
 		mTayLakes:[true, 17, 13, 4, 0, 2, 2, 0, 0, 61],
 		mParkside:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		rOne:[true, 4, 1, 3, 1, 4, 1, 0, 1, 32],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 5, 5, 0, 0, 4, 1, 0, 0, 34],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	{
@@ -116,7 +116,7 @@ const sPlayer = [
 		mTayLakes:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		mParkside:[true, 7, 3, 4, 1, 2, 1, 0, 0, 31],
 		rOne:[true, 4, 2, 2, 0, 3, 0, 0, 0, 22],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 9, 6, 3, 0, 1, 0, 0, 0, 28],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	{
@@ -126,7 +126,7 @@ const sPlayer = [
 		mTayLakes:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		mParkside:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		rOne:[true, 2, 2, 0, 0, 1, 2, 1, 0, 22],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 9, 7, 2, 0, 2, 4, 2, 0, 57],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	{
@@ -136,7 +136,7 @@ const sPlayer = [
 		mTayLakes:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		mParkside:[true, 7, 3, 4, 0, 3, 0, 0, 0, 29],
 		rOne:[true, 7, 6, 1, 1, 11, 0, 0, 0, 67],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 14, 7, 7, 3, 7, 1, 0, 0, 75],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	{
@@ -146,7 +146,7 @@ const sPlayer = [
 		mTayLakes:[true, 12, 10, 2, 0, 8, 0, 0, 0, 66],
 		mParkside:[true, 5, 4, 1, 0, 3, 0, 0, 0, 26],
 		rOne:[true, 3, 2, 1, 0, 10, 0, 0, 0, 48],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 1, 1, 0, 0, 6, 0, 0, 0, 27],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	{
@@ -166,7 +166,7 @@ const sPlayer = [
 		mTayLakes:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		mParkside:[true, 5, 0, 5, 0, 1, 2, 0, 0, 20],
 		rOne:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	{
@@ -196,7 +196,7 @@ const sPlayer = [
 		mTayLakes:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		mParkside:[true, 10, 8, 2, 0, 4, 5, 0, 0, 59],
 		rOne:[true, 11, 5, 6, 3, 2, 1, 0, 0, 47],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 12, 8, 4, 4, 6, 4, 0, 0, 80],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	{
@@ -216,7 +216,7 @@ const sPlayer = [
 		mTayLakes:[true, 23, 17, 6, 7, 9, 2, 0, 0, 126],
 		mParkside:[true, 28, 25, 3, 4, 10, 4, 0, 0, 145],
 		rOne:[true, 19, 15, 4, 5, 7, 0, 0, 0, 96],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 17, 13, 4, 0, 7, 2, 0, 0, 81],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	{
@@ -226,7 +226,7 @@ const sPlayer = [
 		mTayLakes:[true, 10, 8, 2, 1, 4, 0, 1, 0, 53],
 		mParkside:[true, 6, 5, 1, 0, 0, 0, 0, 0, 17],
 		rOne:[true, 1, 1, 0, 0, 0, 0, 0, 0, 4],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 0, 0, 0, 0, 1, 0, 0, 0, 4],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	/*{ No #24 Player
@@ -264,7 +264,7 @@ const sPlayer = [
 		mTayLakes:[true, 4, 1, 3, 0, 1, 0, 0, 0, 13],
 		mParkside:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		rOne:[true, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	/*{ No #28 Player
@@ -293,7 +293,7 @@ const sPlayer = [
 		mTayLakes:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		mParkside:[true, 16, 12, 4, 1, 9, 1, 0, 0, 86],
 		rOne:[true, 11, 10, 1, 2, 3, 0, 0, 0, 50],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 16, 11, 5, 5, 7, 2, 0, 0, 92],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 	/*{ No #31 Player
@@ -323,7 +323,18 @@ const sPlayer = [
 		mTayLakes:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		mParkside:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		rOne:[true, 6, 4, 2, 0, 1, 0, 0, 0, 20],
-        rTwo:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 8, 2, 6, 1, 2, 0, 0, 0, 29],
+		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+	},
+
+	{
+		name:["Madison", "Magro"],
+		jerseyImg:["img/player_jerseys/12.png"],
+        mMelton:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		mTayLakes:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		mParkside:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+		rOne:[true, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        rTwo:[true, 0, 0, 0, 0, 1, 0, 0, 0, 4],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 	},
 ];

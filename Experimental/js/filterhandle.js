@@ -6,7 +6,6 @@ const catalogue = [
 ];
 
 var yearElement = document.getElementById("year-filter");
-
 var roundElement = document.getElementById("round-filter");
 
 function filterHandle() {
@@ -19,9 +18,9 @@ function filterHandle() {
 
         for(i = 0; i < catalogue[0].preSeasonValue.length; i++) {
             var option = document.createElement("option");
+            option.id = catalogue.preSeasonValue[i];
             option.value = catalogue.preSeasonValue[i];
             option.innerHTML = catalogue.preSeasonInner[i];
-
         }
     } else if(seasonElement.value == "season") {
 
