@@ -4,10 +4,41 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css" />
+    <script src="js/filterhandle.js"></script>
+    <script src="js/seasonone.js"></script>
+    <script src="js/main.js"></script>
     <title>KP Stats</title>
 </head>
 <body>
-    
+
+    <div class="container rubik centered">
+        <h1>StatCenter</h1>
+    </div>
+
+    <div class="container filter">
+        <select name="year-filter" id="year-filter" class="oswald" onchange="filterHandle()" disabled>
+            <option value="2024" selected>2024</option>
+        </select>
+
+        <select name="season-filter" id="season-filter" onchange="filterHandle()" class="oswald">
+            <option value="pre-season">Pre-Season</option>
+            <option value="season" selected>Season</option>
+            <option value="finals" disabled>Finals</option>
+        </select>
+
+        <select name="round-filter" id="round-filter" onchange="filterHandle()" class="oswald">
+            <option value="total" selected>Total</option>
+        </select>
+    </div>
+
+    <script>
+		document.addEventListener('DOMContentLoaded', function() {
+            loadDefault();
+		});
+	</script>
 </body>
 </html>

@@ -1,16 +1,4 @@
-/*
-const disposals = 1;
-const kicks = 2;
-const handballs = 3;
-const clearances = 4;
-const tackles = 5;
-const marks = 6;
-const goals = 7;
-const behinds = 8;
-const fantasy = 9;
-*/
-
-const sPlayer = [
+const player = [
 	{
 		name:["Jemma", "Hay"],
 		jerseyImg:["img/player_jerseys/10.png"],

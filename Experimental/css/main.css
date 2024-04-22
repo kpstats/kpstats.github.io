@@ -2,14 +2,36 @@
     margin: 0;
 }
 
-.statcard-container {
-    max-width: 300px;
-    position: relative;
-    margin: auto;
+.rubik {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
 }
 
-.statcard-table {
-    display: table;
-    table-layout: fixed;
+/* <uniquifier>: Use a unique and descriptive class name */
+/* <weight>: Use a value from 200 to 700 */
+
+.oswald {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.centered {
+    text-align: center;
+}
+
+.container {
+    margin: 10px;
+}
+
+.filter select {
+    font-size: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     width: 100%;
+    text-align: center;
+    height: 30px;
+    border-radius: 20px;
 }
