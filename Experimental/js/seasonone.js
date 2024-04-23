@@ -1,5 +1,6 @@
 const sPlayer = [
-	/*{
+	/*
+	{
 		name:["", ""],
 		jerseyImg:["img/player_jerseys/00.png"],
         mMelton:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -7,7 +8,8 @@ const sPlayer = [
 		mParkside:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		rOne:[false, 0, 0, 0, 0, 0, 0, 0, 0, 0],
 		total:[0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-	},*/
+	},
+	*/
 	{
 		name:["Erin", "Robinson"],
 		jerseyImg:["img/player_jerseys/02.png"],
