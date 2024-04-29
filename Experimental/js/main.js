@@ -16,5 +16,7 @@ function loadDefault() {
         roundElement.appendChild(option);
     }
 
+    createTable();
+
     console.log("Loaded!");
 }
