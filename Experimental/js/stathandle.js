@@ -1,6 +1,15 @@
 const rowData = 3;
-
 var counter = 1;
+
+const disposals = 1;
+const kicks = 2;
+const handballs = 3;
+const clearances = 4;
+const tackles = 5;
+const marks = 6;
+const goals = 7;
+const behinds = 8;
+const fantasy = 9;
 
 function createTable() {
     var table = document.createElement("table");
@@ -8,6 +17,7 @@ function createTable() {
     table.id = "stat-table";
     table.style.tableLayout = "fixed";
     table.style.width = "100%";
+    table.style.textAlign = "center";
     container.append(table);
 
     for(i = 0; i < player.length; i++) {
@@ -50,7 +60,7 @@ function calculateTotals() {
         //calculate season totals (2024)
             for(i = 0; i < player.length; i++) {
             var stats = player[i].rOne[counter] + 
-            player[i].rTwo[counter]; /*+ player[i].rThree[counter] +
+            player[i].rTwo[counter] + player[i].rThree[counter]; /*+
             player[i].rFour[counter] + player[i].rFive[counter] +
             player[i].rSix[counter] + player[i].rSeven[counter] +
             player[i].rEight[counter] + player[i].rNine[counter] +
@@ -68,5 +78,24 @@ function calculateTotals() {
 }
 
 function defaultTable() {
-    
+    player.sort(function(a, b) 
+    { return b.total[fantasy] - a.total[fantasy]; });
+
+    for(i = 0; i < player.length; i ++) {
+        var img = document.createElement("img");
+        var pName = document.createElement("p");
+        var pValue = document.createElement("p");
+        var imgCell = document.getElementById("data" + i.toString() + "0");
+        var nameCell = document.getElementById("data" + i.toString() + "1");
+        var valueCell = document.getElementById("data" + i.toString() + "2");
+
+        img.src = player[i].jerseyImg;
+        img.alt = "player jersey";
+        img.height = "60";
+        imgCell.append(img);
+        pName.innerHTML = player[i].name[0] + " " + player[i].name[1];
+        nameCell.append(pName);
+        pValue.innerHTML = player[i].total[fantasy];
+        valueCell.append(pValue);
+    }
 }

@@ -17,6 +17,6 @@ function loadDefault() {
     }
 
     createTable();
-
+    defaultTable();
     console.log("Loaded!");
 }

@@ -15,7 +15,7 @@ const catalogue = [
 
 const isPlayed = [
     {
-        cZero:[true, true, false, false, false, false, false, false, false, false, false, false, false, false],
+        cZero:[true, true, true, false, false, false, false, false, false, false, false, false, false, false],
     }
 ];
 
