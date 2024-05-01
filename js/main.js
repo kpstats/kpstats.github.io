@@ -1,23 +1,22 @@
-function showTopFive() {
-	sortDisposals();
-	sortKicks();
-	sortHandballs();
-	sortClearances();
-	sortTackles();
-	sortMarks();
-	sortGoals();
-	sortBehinds();
-	sortFantasy();
-}
+function loadDefault() {
+    var roundElement = document.getElementById("round-filter");
 
-function calculateTotals() {
-	totalDisposals();
-	totalKicks();
-	totalHandballs();
-	totalClearances();
-	totalTackles();
-	totalMarks();
-	totalGoals();
-	totalBehinds();
-	totalFantasy();
+    for(i = 0; i < catalogue[0].seasonValue.length; i++) {
+        var option = document.createElement("option");
+        option.id = catalogue[0].seasonValue[i];
+        option.value = catalogue[0].seasonValue[i];
+        option.innerHTML = catalogue[0].seasonInner[i];
+        
+        if(!isPlayed[0].cZero[i]) {
+            option.disabled = true;
+        } else {
+            option.disabled = false;
+        }
+        
+        roundElement.appendChild(option);
+    }
+
+    createTable();
+    defaultTable();
+    console.log("Loaded!");
 }
